@@ -185,6 +185,49 @@ footer small {
     color: #8a8d91;
     margin-left: 3vh;
 }
+.error-message {
+    color: red; /* Red text color */
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    display: none; /* Hidden by default */
+    border-radius: 6px;
+    font-size: 14px;
+}
+.error-message p {
+    margin: 0;
+    font-size: 14px; /* Base font size */
+    line-height: 1.5; /* Better line spacing for readability */
+    text-align: center; /* Center-align the error text */
+}
+
+@media (max-width: 900px) {
+    .error-message p {
+        font-size: 16px; /* Increase font size on smaller screens */
+        padding: 5px 0; /* Adjust padding for better spacing */
+    }
+}
+
+@media (max-width: 460px) {
+    .error-message p {
+        font-size: 16px; /* Keep the font size larger on very small screens */
+        padding: 5px 0; /* Adjust padding for mobile screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .error-message {
+        font-size: 16px; /* Larger text for readability on smaller screens */
+        padding: 15px; /* More padding on smaller screens */
+    }
+}
+
+@media (max-width: 460px) {
+    .error-message {
+        font-size: 16px; /* Keep the same size or adjust if needed */
+        padding: 10px; /* Adjust padding for mobile devices */
+    }
+}
 
 @media (max-width: 900px) {
     .fb-form {
