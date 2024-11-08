@@ -236,7 +236,7 @@ footer small {
     }
 }
 
-@media (max-width: 230px) {
+@media (max-width: 460px) {
     .fb-form h1 {
         font-size: 3.5rem;
     }
