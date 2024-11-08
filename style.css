@@ -1,143 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
-html, body {
-    height: 100%;
-    font-family: 'Helvetica', Arial, sans-serif;
-}
-
-.container {
+.res {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f2f5;
-    flex-direction: column; /* Stack on mobile */
-    padding: 20px;
 }
 
-.intro-section {
-    text-align: center;
-    color: #1877f2;
-    margin-bottom: 30px;
+.row {
+    padding: 0 15px;
+    min-height: 100vh;
+    justify-content: center;
+    background: #f0f2f5;
 }
 
-.intro-section h1 {
-    font-size: 56px;
-    font-weight: bold;
-}
-
-.intro-section p {
-    font-size: 20px;
-    color: #606770;
-    line-height: 1.4;
-}
-
-.signin-section {
+.fb-form {
+    justify-content: space-between;
+    max-width: 1000px;
     width: 100%;
-    max-width: 380px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fb-form .card {
+    margin-bottom: 90px;
+}
+
+.fb-form h1 {
+    color: #1877f2;
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.fb-form p {
+    font-size: 1.75rem;
+    white-space: nowrap;
+}
+
+form {
     display: flex;
     flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
 }
 
-.signin-section input {
-    border: 1px solid #dddfe2;
-    padding: 14px;
-    margin-bottom: 10px;
+form input {
+    height: 55px;
+    width: 100%;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 16px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    padding: 0 14px;
 }
 
-.signin-section input::placeholder {
+form input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+::placeholder {
     color: #777;
+    font-size: 1.063rem;
 }
 
-.signin-section button {
-    background-color: #1877f2;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    color: white;
-    padding: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.1s ease-in;
-}
-
-.signin-section button:hover {
-    background: #166fe5;
-}
-
-.signin-section a {
-    color: #1877f2;
-    font-size: 14px;
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-}
-
-.error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
-    display: none;
-}
-
-.footer-links {
+.fb-submit {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 12px;
-    color: #606770;
-    max-width: 1000px;
-    margin: 20px auto;
-    line-height: 1.5;
-    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
 }
 
-.footer-links a {
-    color: #606770;
+.fb-submit .login {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #1877f2;
+    padding: 15px 0;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.fb-submit .login:hover {
+    background: #0d65d9;
+}
+
+form a {
     text-decoration: none;
 }
 
-.footer-links a:hover {
+.fb-submit .forgot {
+    color: #1877f2;
+    font-size: 0.875rem;
+}
+
+.fb-submit .forgot:hover {
     text-decoration: underline;
 }
 
-.footer {
+hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 25px;
     text-align: center;
-    color: #606770;
+    margin-bottom: 20px;
+}
+
+.button a {
+    padding: 15px 20px;
+    background: #42b72a;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1.063rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.button a:hover {
+    background: #3ba626;
+}
+
+.footer-langs {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 8px 0;
+
+    margin-left: 3vh;
+}
+
+footer ol:first-child {
+    border-bottom: 1px solid #dddfe2;
+}
+
+footer ol:first-child li:last-child button {
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    outline: none;
+    color: #4b4f56;
+    padding: 0 8px;
+    font-weight: 700;
     font-size: 12px;
-    margin-top: 10px;
 }
 
-/* Media Queries for larger screens */
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row; /* Change layout to row on larger screens */
+footer ol li {
+    padding-right: 20px;
+    font-size: 12px;
+    color: #8a8d91;
+}
+
+footer ol li a {
+    text-decoration: none;
+    color: #8a8d91;
+}
+
+footer ol li a:hover {
+    text-decoration: underline;
+}
+
+footer small {
+    font-size: 12px;
+    color: #8a8d91;
+    margin-left: 3vh;
+}
+
+@media (max-width: 900px) {
+    .fb-form {
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .intro-section {
-        max-width: 400px;
-        margin-right: 50px;
-    }
-    
-    .signin-section {
-        width: 380px;
+
+    .fb-form .card {
+        margin-bottom: 30px;
     }
 }
 
-@media (min-width: 1024px) {
-    .container {
-        justify-content: center;
-        padding: 40px;
+@media (max-width: 460px) {
+    .fb-form h1 {
+        font-size: 3.5rem;
+    }
+
+    .fb-form p {
+        font-size: 1.3rem;
+    }
+
+    form {
+        padding: 15px;
     }
 }
