@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+    flex-direction: column; /* Stack on mobile */
+    padding: 20px;
+}
+
+.intro-section {
+    text-align: center;
+    color: #1877f2;
+    margin-bottom: 30px;
+}
+
+.intro-section h1 {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.intro-section p {
+    font-size: 20px;
+    color: #606770;
+    line-height: 1.4;
+}
+
+.signin-section {
+    width: 100%;
+    max-width: 380px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.signin-section input {
+    border: 1px solid #dddfe2;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.signin-section input::placeholder {
+    color: #777;
+}
+
+.signin-section button {
+    background-color: #1877f2;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    color: white;
+    padding: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.1s ease-in;
+}
+
+.signin-section button:hover {
+    background: #166fe5;
+}
+
+.signin-section a {
+    color: #1877f2;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+    color: #606770;
+    max-width: 1000px;
+    margin: 20px auto;
+    line-height: 1.5;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #606770;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    color: #606770;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row; /* Change layout to row on larger screens */
+    }
+    
+    .intro-section {
+        max-width: 400px;
+        margin-right: 50px;
+    }
+    
+    .signin-section {
+        width: 380px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        justify-content: center;
+        padding: 40px;
+    }
+}
